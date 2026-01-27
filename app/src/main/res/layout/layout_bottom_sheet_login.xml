@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="24dp">
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:background="#E0E0E0"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Welcome Back"
+        android:textAlignment="center"
+        android:textColor="@color/text_black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Let's work"
+        android:textAlignment="center"
+        android:textColor="@color/text_black"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Username / Email"-->
+<!--        android:textColor="@color/text_gray"-->
+<!--        android:layout_marginBottom="8dp"/>-->
+
+    <EditText
+        android:id="@+id/etLoginUsername"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_input_field"
+        android:paddingHorizontal="16dp"
+        android:hint="Enter Email"
+        android:layout_marginBottom="16dp"/>
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Password"-->
+<!--        android:textColor="@color/text_gray"-->
+<!--        android:layout_marginBottom="8dp"/>-->
+
+    <EditText
+        android:id="@+id/etLoginPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_input_field"
+        android:paddingHorizontal="16dp"
+        android:inputType="textPassword"
+        android:hint="Enter Password"
+        android:layout_marginBottom="32dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitLogin"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/bg_button_gradient"
+        android:text="Log In"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/Text"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:text="Don't have an account?">-->
+<!--    </TextView>>-->
+
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity"
+    android:background="@drawable/bg_gradient"
+    android:padding="36dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="UniTask = )"
+        android:textAlignment="center"
+        android:textColor="@color/text_black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Organize your study tasks.\n Stay focused. Get things done. "
+        android:textColor="@color/text_gray"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <ImageView
+        android:id="@+id/imgHero"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/unitask_logo"
+        app:layout_constraintBottom_toTopOf="@id/btnSignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/bg_button_outline"
+        android:text="Create Account"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_button_outline"
+        android:text="Log In"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
