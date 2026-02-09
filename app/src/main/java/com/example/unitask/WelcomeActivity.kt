@@ -1,8 +1,12 @@
 package com.example.unitask
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class WelcomeActivity : AppCompatActivity() {
@@ -16,36 +20,12 @@ class WelcomeActivity : AppCompatActivity() {
 
         // เมื่อกดปุ่ม Login ให้แสดง Popup
         btnLogin.setOnClickListener {
-            showLoginBottomSheet()
+            LoginBottomSheetDialog().show(supportFragmentManager, "LoginBottomSheetDialog")
         }
 
         // เมื่อกดปุ่ม Create Account ให้แสดง Popup Register
         btnSignUp.setOnClickListener {
-            showRegisterBottomSheet()
+            RegisterBottomSheetDialog().show(supportFragmentManager, "RegisterBottomSheetDialog")
         }
-    }
-
-    private fun showLoginBottomSheet() {
-        val dialog = BottomSheetDialog(this)
-        dialog.setContentView(R.layout.layout_bottom_sheet_login)
-
-        val btnSubmit = dialog.findViewById<Button>(R.id.btnlogin)
-        btnSubmit?.setOnClickListener {
-            // โค้ดสำหรับเช็ค Login
-            dialog.dismiss()
-        }
-        dialog.show()
-    }
-
-    private fun showRegisterBottomSheet() {
-        val dialog = BottomSheetDialog(this)
-        dialog.setContentView(R.layout.layout_bottom_sheet_register)
-
-        val btnRegister = dialog.findViewById<Button>(R.id.btnRegisterSubmit)
-        btnRegister?.setOnClickListener {
-            // โค้ดสำหรับลงทะเบียน
-            dialog.dismiss()
-        }
-        dialog.show()
     }
 }

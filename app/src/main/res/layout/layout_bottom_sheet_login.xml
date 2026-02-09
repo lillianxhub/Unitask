@@ -4,7 +4,8 @@
     android:layout_height="wrap_content"
     android:background="@color/white"
     android:orientation="vertical"
-    android:padding="24dp">
+    android:padding="24dp"
+    android:layout_marginBottom="24dp">
     <View
         android:layout_width="40dp"
         android:layout_height="4dp"
@@ -33,28 +34,17 @@
         android:textSize="16sp"
         android:textStyle="normal" />
 
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Username / Email"-->
-<!--        android:textColor="@color/text_gray"-->
-<!--        android:layout_marginBottom="8dp"/>-->
-
     <EditText
         android:id="@+id/etLoginUsername"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/bg_input_field"
         android:paddingHorizontal="16dp"
+        android:textColor="@color/text_black"
+        android:textColorHint="@color/text_hint"
         android:hint="Enter Email"
-        android:layout_marginBottom="16dp"/>
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Password"-->
-<!--        android:textColor="@color/text_gray"-->
-<!--        android:layout_marginBottom="8dp"/>-->
+        android:layout_marginBottom="16dp"
+        />
 
     <EditText
         android:id="@+id/etLoginPassword"
@@ -62,7 +52,9 @@
         android:layout_height="50dp"
         android:background="@drawable/bg_input_field"
         android:paddingHorizontal="16dp"
+        android:textColor="@color/text_black"
         android:inputType="textPassword"
+        android:textColorHint="@color/text_hint"
         android:hint="Enter Password"
         android:layout_marginBottom="32dp"/>
 
@@ -70,6 +62,7 @@
         android:id="@+id/btnlogin"
         android:layout_width="match_parent"
         android:layout_height="55dp"
+        android:layout_marginBottom="6dp"
         android:background="@drawable/bg_button_gradient"
         android:text="Log In"
         android:textAllCaps="false"
