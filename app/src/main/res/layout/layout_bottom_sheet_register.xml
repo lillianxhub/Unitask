@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     android:orientation="vertical"
     android:padding="24dp">
@@ -32,6 +33,16 @@
         android:textColor="@color/text_black"
         android:textSize="16sp"
         android:textStyle="normal" />
+    <EditText
+        android:id="@+id/etRegisterName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_input_field"
+        android:textColor="@color/text_black"
+        android:textColorHint="@color/text_hint"
+        android:hint="Enter Name"
+        android:paddingHorizontal="16dp" />
 
     <EditText
         android:id="@+id/etRegisterEmail"
@@ -44,29 +55,46 @@
         android:hint="Enter Email"
         android:paddingHorizontal="16dp" />
 
-    <EditText
-        android:id="@+id/etRegisterPassword"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/bg_input_field"
-        android:textColor="@color/text_black"
-        android:textColorHint="@color/text_hint"
-        android:hint="Enter Password"
-        android:inputType="textPassword"
-        android:paddingHorizontal="16dp" />
+        app:hintEnabled="false"
 
-    <EditText
-        android:id="@+id/etRegisterConfirmPassword"
+        app:endIconMode="password_toggle"
+        app:endIconDrawable="@drawable/ic_password_eye_selector"
+        app:endIconTint="@color/text_gray">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegisterPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_input_field"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/text_hint"
+            android:paddingHorizontal="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/bg_input_field"
-        android:textColor="@color/white"
-        android:textColorHint="@color/text_hint"
-        android:hint="Confirm Password"
-        android:inputType="textPassword"
-        android:paddingHorizontal="16dp" />
+        app:hintEnabled="false"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRegisterConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_input_field"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/text_hint"
+            android:paddingHorizontal="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnRegisterSubmit"
