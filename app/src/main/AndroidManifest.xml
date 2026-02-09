@@ -14,12 +14,12 @@
         <activity
             android:name=".register_layout"
             android:exported="false" />
-        <activity
-            android:name=".test_register"
-            android:exported="false" />
-        <activity
-            android:name=".register"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".test_register"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".register"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".WelcomeActivity"
             android:exported="true">
