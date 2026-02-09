@@ -11,9 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Unitask">
-        <activity
-            android:name=".register_layout"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".RegisterActivity"-->
+<!--            android:exported="false" />-->
 <!--        <activity-->
 <!--            android:name=".test_register"-->
 <!--            android:exported="false" />-->

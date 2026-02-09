@@ -8,6 +8,7 @@
 
     <color name="text_black">#1A1A1A</color>
     <color name="text_gray">#888888</color>
+    <color name="text_hint">#aeaeae</color>
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
