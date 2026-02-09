@@ -2,9 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white"
+    android:background="@android:color/white"
     android:orientation="vertical"
     android:padding="24dp">
+
     <View
         android:layout_width="40dp"
         android:layout_height="4dp"
@@ -15,9 +16,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="8dp"
         android:layout_gravity="center_horizontal"
-        android:text="Welcome Back"
+        android:text="Welcome to Unitask"
         android:textAlignment="center"
         android:textColor="@color/text_black"
         android:textSize="24sp"
@@ -34,15 +35,8 @@
         android:textSize="16sp"
         android:textStyle="normal" />
 
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Username / Email"-->
-<!--        android:textColor="@color/text_gray"-->
-<!--        android:layout_marginBottom="8dp"/>-->
-
     <EditText
-        android:id="@+id/etLoginUsername"
+        android:id="@+id/etRegisterEmail"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/bg_input_field"
@@ -50,42 +44,35 @@
         android:hint="Enter Email"
         android:layout_marginBottom="16dp"/>
 
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Password"-->
-<!--        android:textColor="@color/text_gray"-->
-<!--        android:layout_marginBottom="8dp"/>-->
-
     <EditText
-        android:id="@+id/etLoginPassword"
+        android:id="@+id/etRegisterPassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/bg_input_field"
         android:paddingHorizontal="16dp"
         android:inputType="textPassword"
         android:hint="Enter Password"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etRegisterConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_input_field"
+        android:paddingHorizontal="16dp"
+        android:inputType="textPassword"
+        android:hint="Confirm Password"
         android:layout_marginBottom="32dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnlogin"
+        android:id="@+id/btnRegisterSubmit"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@drawable/bg_button_gradient"
-        android:text="Log In"
+        android:text="Register"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"/>
-
-<!--    <TextView-->
-<!--        android:id="@+id/Text"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="24dp"-->
-<!--        android:layout_gravity="center_horizontal"-->
-<!--        android:text="Don't have an account?">-->
-<!--    </TextView>>-->
-
 
 </LinearLayout>

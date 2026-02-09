@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Unitask">
         <activity
+            android:name=".register_layout"
+            android:exported="false" />
+        <activity
+            android:name=".test_register"
+            android:exported="false" />
+        <activity
+            android:name=".register"
+            android:exported="false" />
+        <activity
             android:name=".WelcomeActivity"
             android:exported="true">
             <intent-filter>
@@ -20,11 +29,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>
