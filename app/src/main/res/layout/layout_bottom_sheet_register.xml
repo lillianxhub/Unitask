@@ -10,14 +10,14 @@
         android:layout_width="40dp"
         android:layout_height="4dp"
         android:layout_gravity="center"
-        android:background="#E0E0E0"
-        android:layout_marginBottom="24dp"/>
+        android:layout_marginBottom="30dp"
+        android:background="#E0E0E0" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
         android:text="Welcome to Unitask"
         android:textAlignment="center"
         android:textColor="@color/text_black"
@@ -27,8 +27,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
         android:text="Let's work"
         android:textAlignment="center"
         android:textColor="@color/text_black"
@@ -39,30 +39,30 @@
         android:id="@+id/etRegisterEmail"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/bg_input_field"
-        android:paddingHorizontal="16dp"
         android:hint="Enter Email"
-        android:layout_marginBottom="16dp"/>
+        android:paddingHorizontal="16dp" />
 
     <EditText
         android:id="@+id/etRegisterPassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/bg_input_field"
-        android:paddingHorizontal="16dp"
-        android:inputType="textPassword"
         android:hint="Enter Password"
-        android:layout_marginBottom="16dp"/>
+        android:inputType="textPassword"
+        android:paddingHorizontal="16dp" />
 
     <EditText
         android:id="@+id/etRegisterConfirmPassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/bg_input_field"
-        android:paddingHorizontal="16dp"
-        android:inputType="textPassword"
         android:hint="Confirm Password"
-        android:layout_marginBottom="32dp"/>
+        android:inputType="textPassword"
+        android:paddingHorizontal="16dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnRegisterSubmit"
@@ -73,6 +73,6 @@
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
 </LinearLayout>
