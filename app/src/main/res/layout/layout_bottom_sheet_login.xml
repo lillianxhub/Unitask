@@ -11,6 +11,7 @@
         android:layout_width="40dp"
         android:layout_height="4dp"
         android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
         android:background="#E0E0E0" />
 
     <TextView
@@ -35,36 +36,30 @@
         android:textSize="16sp"
         android:textStyle="normal" />
 
-    <EditText
-        android:id="@+id/etLoginUsername"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/bg_input_field"
-        android:paddingHorizontal="16dp"
-        android:textColor="@color/text_black"
-        android:textColorHint="@color/text_hint"
-        android:hint="Enter Email"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        />
+        app:hintEnabled="false">
 
-<!--    <EditText-->
-<!--        android:id="@+id/etLoginPassword"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:background="@drawable/bg_input_field"-->
-<!--        android:paddingHorizontal="16dp"-->
-<!--        android:textColor="@color/text_black"-->
-<!--        android:inputType="textPassword"-->
-<!--        android:textColorHint="@color/text_hint"-->
-<!--        android:hint="Enter Password"-->
-<!--        android:layout_marginBottom="32dp"/>-->
+        <EditText
+            android:id="@+id/etLoginUsername"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_input_field"
+            android:paddingHorizontal="16dp"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/text_hint"
+            android:hint="Enter Email" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         app:hintEnabled="false"
-
         app:endIconMode="password_toggle"
         app:endIconDrawable="@drawable/ic_password_eye_selector"
         app:endIconTint="@color/text_gray">
@@ -72,16 +67,16 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etLoginPassword"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="55dp"
             android:background="@drawable/bg_input_field"
             android:textColor="@color/text_black"
             android:textColorHint="@color/text_hint"
             android:hint="Enter Password"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
             android:inputType="textPassword"
             android:paddingHorizontal="16dp" />
     </com.google.android.material.textfield.TextInputLayout>
-
-
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnlogin"
@@ -93,17 +88,6 @@
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        android:textStyle="bold"
-    />
-
-<!--    <TextView-->
-<!--        android:id="@+id/Text"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="24dp"-->
-<!--        android:layout_gravity="center_horizontal"-->
-<!--        android:text="Don't have an account?">-->
-<!--    </TextView>>-->
-
+        android:textStyle="bold" />
 
 </LinearLayout>
