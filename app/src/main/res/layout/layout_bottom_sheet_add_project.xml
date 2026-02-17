@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="40dp"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="24dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Project"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivCloseAddProject"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:tint="@color/black" />
+    </RelativeLayout>
+
+    <!-- Project Name -->
+    <EditText
+        android:id="@+id/etProjectName"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/bg_input_field"
+        android:gravity="center_vertical"
+        android:hint="Enter project name"
+        android:includeFontPadding="false"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/black"
+        android:textColorHint="#999999" />
+
+    <!-- Description -->
+    <EditText
+        android:id="@+id/etProjectDescription"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/bg_input_field"
+        android:gravity="top|start"
+        android:hint="Enter description"
+        android:includeFontPadding="false"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        android:textColorHint="#999999" />
+
+    <!-- Due Date -->
+    <RelativeLayout
+        android:id="@+id/rlDueDateContainer"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/bg_input_field"
+        android:paddingHorizontal="16dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <EditText
+            android:id="@+id/etProjectDueDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@+id/ivCalendar"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:hint="Enter due date"
+            android:includeFontPadding="false"
+            android:focusable="false"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:textColor="@color/black"
+            android:textColorHint="#999999" />
+
+        <ImageView
+            android:id="@+id/ivCalendar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_my_calendar"
+            app:tint="#999999" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSaveProject"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_button_gradient"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
