@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WelcomeActivity"
+    tools:context=".auth.WelcomeActivity"
     android:background="@drawable/bg_gradient"
     android:padding="36dp">
 
@@ -18,7 +18,7 @@
         android:text="UniTask = )"
         android:textAlignment="center"
         android:textColor="@color/text_black"
-        android:textSize="34dp"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,41 +41,44 @@
         android:id="@+id/imgHero"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
         android:src="@drawable/unitask_logo"
         app:layout_constraintBottom_toTopOf="@id/btnSignUp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSignUp"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="55dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/bg_button_outline"
         android:text="Create Account"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnlogin" />
+        app:layout_constraintBottom_toTopOf="@+id/btnlogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnlogin"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="55dp"
+        android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/bg_button_outline"
         android:text="Log In"
         android:textAllCaps="false"
-        android:textColor="@android:color/black"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
