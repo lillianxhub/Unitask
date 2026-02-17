@@ -1,14 +1,16 @@
 package com.example.unitask.project
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import com.example.unitask.R
 
-class ProjectDetailActivity : AppCompatActivity() {
+class ProjectDetailActivity : AppCompatActivity(), AddTaskBottomSheetDialog.AddTaskListener {
 
     private lateinit var layoutTasks: LinearLayout
     private lateinit var layoutMembers: LinearLayout
@@ -32,6 +34,7 @@ class ProjectDetailActivity : AppCompatActivity() {
         indicatorMembers = findViewById(R.id.indicatorMembers)
         llTasksContainer = findViewById(R.id.llTasksContainer)
         llEmptyTasks = findViewById(R.id.llEmptyTasks)
+        val fabAddTask = findViewById<View>(R.id.fabContainer)
 
         val projectName = intent.getStringExtra("PROJECT_NAME") ?: "Mobile Project"
         val memberEmail = intent.getStringExtra("MEMBER_EMAIL")
@@ -65,6 +68,30 @@ class ProjectDetailActivity : AppCompatActivity() {
         findViewById<LinearLayout>(R.id.tabMembers).setOnClickListener {
             switchTab(false)
         }
+
+        // เชื่อมต่อปุ่ม + เพื่อเปิดหน้า Add New Task
+        fabAddTask.setOnClickListener {
+            val dialog = AddTaskBottomSheetDialog()
+            dialog.listener = this // ตั้งค่า Listener ให้กับหน้าต่างเพิ่มงาน
+            dialog.show(supportFragmentManager, "AddTaskBottomSheet")
+        }
+    }
+
+    // ฟังก์ชันที่จะทำงานเมื่อกดปุ่ม Save ในหน้า Add Task
+    override fun onTaskAdded(name: String, description: String, assignedTo: String, dueDate: String, priority: String) {
+        // ซ่อนหน้าว่าง
+        llEmptyTasks.visibility = View.GONE
+        
+        // สร้าง View ใหม่สำหรับงานที่แอดเข้ามา
+        val inflater = LayoutInflater.from(this)
+        val taskView = inflater.inflate(R.layout.item_task_mock, llTasksContainer, false) as CardView
+        
+        // เซ็ตข้อมูลตามที่กรอกมา
+        taskView.findViewById<TextView>(R.id.tvTaskTitle)?.text = name // สมมติว่ามี id นี้ใน item_task_mock
+        // (ในอนาคตคุณสามารถปรับแต่งฟิลด์อื่นๆ ใน item_task_mock ให้ตรงตามข้อมูลที่รับมาได้ครับ)
+        
+        // เพิ่มเข้าไปในรายการ
+        llTasksContainer.addView(taskView, 0) // เพิ่มไว้บนสุด
     }
 
     private fun switchTab(isTask: Boolean) {

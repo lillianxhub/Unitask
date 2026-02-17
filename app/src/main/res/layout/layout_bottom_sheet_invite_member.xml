@@ -5,7 +5,9 @@
     android:layout_height="wrap_content"
     android:background="@android:color/white"
     android:orientation="vertical"
-    android:padding="24dp">
+    android:paddingBottom="40dp"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="24dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -36,6 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="16dp"
         android:background="@drawable/bg_input_field"
         android:gravity="center_vertical"
         android:hint="Enter Email"
@@ -45,11 +48,12 @@
         android:textColor="@color/black"
         android:textColorHint="#999999" />
 
-    <!-- Role Selection (Mockup Spinner style) -->
+    <!-- Role Selection -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginBottom="32dp"
+        android:layout_marginHorizontal="16dp"
         android:background="@drawable/bg_input_field"
         android:paddingHorizontal="16dp">
 
@@ -75,6 +79,8 @@
         android:id="@+id/btnInviteSubmit"
         android:layout_width="match_parent"
         android:layout_height="55dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/bg_button_gradient"
         android:text="Invite"
         android:textAllCaps="false"

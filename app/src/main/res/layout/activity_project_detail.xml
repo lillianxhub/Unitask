@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".ProjectDetailActivity">
+    tools:context=".project.ProjectDetailActivity">
 
     <!-- Top Navigation Bar -->
     <LinearLayout
@@ -445,6 +445,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
+            android:id="@+id/ivAddTask"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center"

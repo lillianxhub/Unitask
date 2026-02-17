@@ -3,10 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="12dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
     app:cardBackgroundColor="#FFFFFF"
     app:cardCornerRadius="16dp"
-    app:cardElevation="2dp">
+    app:cardElevation="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,6 +21,7 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/tvTaskTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="UX/UI"
@@ -43,6 +45,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvTaskStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_search"
@@ -54,6 +57,7 @@
                 android:textSize="12sp" />
 
             <TextView
+                android:id="@+id/tvTaskPriority"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -78,6 +82,7 @@
             android:layout_marginTop="8dp">
 
             <TextView
+                android:id="@+id/tvAssignedTo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Assigned To : สมชาย"
@@ -85,6 +90,7 @@
                 android:textSize="12sp" />
 
             <TextView
+                android:id="@+id/tvDueDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"

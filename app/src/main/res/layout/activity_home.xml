@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FAFAFA"
-    tools:context=".HomeActivity">
+    tools:context=".home.HomeActivity">
 
     <!-- Header -->
     <TextView
@@ -37,7 +37,7 @@
         android:id="@+id/searchLayout"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="16dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/bg_search"
         android:gravity="center_vertical"
@@ -69,6 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
+        android:clipToPadding="false"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
         app:layout_constraintTop_toBottomOf="@+id/searchLayout">
 
@@ -77,7 +78,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:padding="20dp"
+            android:paddingBottom="100dp"
+            android:clipToPadding="false">
 
             <!-- Due Date Section -->
             <TextView
@@ -93,13 +96,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="2dp">
+                app:cardElevation="4dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/white"
                     android:orientation="vertical"
                     android:padding="20dp">
 
@@ -188,13 +193,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="2dp">
+                app:cardElevation="4dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/white"
                     android:orientation="vertical"
                     android:padding="20dp">
 
@@ -293,6 +300,7 @@
                             android:textSize="12sp" />
 
                         <TextView
+                            android:id="@+id/tvProgressPercent"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
@@ -318,13 +326,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="2dp">
+                app:cardElevation="4dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/white"
                     android:orientation="vertical"
                     android:padding="20dp">
 
@@ -403,7 +413,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
+                            android:layout_marginStart="6dp"
                             android:text="23:59"
                             android:textColor="@color/text_gray"
                             android:textSize="12sp" />
