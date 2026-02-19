@@ -30,6 +30,14 @@
             android:exported="false" />
 
         <activity
+            android:name=".home.MyProjectsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".home.MyProjectDetailActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".project.ProjectDetailActivity"
             android:exported="false" />
 
